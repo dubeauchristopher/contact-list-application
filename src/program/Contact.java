@@ -1,5 +1,7 @@
 package program;
 
+import java.util.List;
+
 /**
  * @author Christopher Dubeau
  * @author Ron Rayas
@@ -10,4 +12,24 @@ package program;
  */
 
 public class Contact {
+
+    private String individualContact;
+    private List newContact;
+
+    /**
+     * This method prints an individual contact
+     * @return
+     */
+    public void printContact(){
+
+    }
+
+    /**
+     * This method prompts the user to
+     * @return
+     */
+    public List addContact(){
+        return newContact;
+    }
+
 }

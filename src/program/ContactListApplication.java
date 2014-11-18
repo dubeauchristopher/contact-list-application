@@ -1,5 +1,7 @@
 package program;
 
+import java.util.List;
+
 /**
  * @author Christopher Dubeau
  * @author Ron Rayas
@@ -10,4 +12,24 @@ package program;
  */
 
 public class ContactListApplication {
+
+
+
+    public static void main(String args[]){
+
+        Contact contact = new Contact();
+        List newContact = contact.addContact();
+        contact.printContact();;
+
+        ContactList contactList = new ContactList();
+        contactList.printAllContacts();;
+        contactList.searchByEmail();
+        contactList.searchByZipCode();
+        contactList.searchByLastName();
+        contactList.sortContactList();
+
+
+    }
+
+
 }
