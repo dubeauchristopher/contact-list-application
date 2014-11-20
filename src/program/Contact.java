@@ -13,8 +13,8 @@ import java.util.List;
 
 public class Contact {
 
-    private String individualContact;
-    private List newContact;
+    private List individualContact;
+
 
     public Contact(){
 
@@ -24,16 +24,16 @@ public class Contact {
      * This method prints an individual contact
      * @return
      */
-    public void printContact(){
-
+    public List printContact(){
+        return individualContact;
     }
 
     /**
      * This method prompts the user to
      * @return
      */
-    public List addContact(){
-        return newContact;
+    public void addContact(){
+
     }
 
     /**

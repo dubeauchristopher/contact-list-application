@@ -15,6 +15,9 @@ public class ContactList {
 
     private List contactList;
     private List sortedContactList;
+    private List searchResultsByEmail;
+    private List searchResultsByLastName;
+    private List searchResultsByZipCode;
 
     public ContactList(){
 
@@ -32,32 +35,32 @@ public class ContactList {
      * This method searches the contact list by email and returns an individual contact.
      * @return
      */
-    public void searchByEmail(){
-
+    public List searchByEmail(){
+        return searchResultsByEmail;
     }
 
     /**
      * This method searches the contact list by last name and returns an individual contact.
      * @return
      */
-    public void searchByLastName(){
-
+    public List searchByLastName(){
+        return searchResultsByLastName;
     }
 
     /**
      * This method searches the contact list by zip code and returns an individual contact.
      * @return
      */
-    public void searchByZipCode(){
-
+    public List searchByZipCode(){
+        return searchResultsByZipCode;
     }
 
     /**
      * This method sorts the entire contact list by last name.
      * @return
      */
-    public void sortContactList(){
-
+    public List sortContactList(){
+        return sortedContactList;
     }
 
     /**
