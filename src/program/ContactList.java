@@ -8,7 +8,7 @@ import java.util.List;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description:
+ * Description: This class
  */
 
 public class ContactList {
@@ -22,7 +22,6 @@ public class ContactList {
     public ContactList(){
 
     }
-
 
     /**
      * This method prints all contacts
