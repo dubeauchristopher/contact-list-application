@@ -14,7 +14,6 @@ import java.util.List;
 public class ContactListApplication {
 
 
-
     public static void main(String args[]){
 
         Contact contact = new Contact();

@@ -16,6 +16,10 @@ public class ContactList {
     private List contactList;
     private List sortedContactList;
 
+    public ContactList(){
+
+    }
+
 
     /**
      * This method prints all contacts
@@ -56,5 +60,12 @@ public class ContactList {
 
     }
 
+    /**
+     * This method accepts values and returns a string
+     * @return
+     */
+    public String toString(){
+        return "";
+    }
 
 }

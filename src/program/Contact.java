@@ -16,6 +16,10 @@ public class Contact {
     private String individualContact;
     private List newContact;
 
+    public Contact(){
+
+    }
+
     /**
      * This method prints an individual contact
      * @return
@@ -30,6 +34,14 @@ public class Contact {
      */
     public List addContact(){
         return newContact;
+    }
+
+    /**
+     * This method accepts values and returns a string
+     * @return
+     */
+    public String toString(){
+        return "";
     }
 
 }
