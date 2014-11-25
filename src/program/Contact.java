@@ -8,7 +8,7 @@ import java.util.List;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description:  This class
+ * Description:  This class will run the contact  menu and call methods from the contact list class to print sort and search contacts
  */
 
 public class Contact {
