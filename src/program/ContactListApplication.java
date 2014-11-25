@@ -6,7 +6,7 @@ package program;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description: This class
+ * Description: This class reads the data the user inputs from the menu.
  */
 
 public class ContactListApplication {
