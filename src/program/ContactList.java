@@ -30,42 +30,7 @@ public class contactList {
     public Contact getContact(int index){
     	return contactList.get(index);
     }
-    /**
-     * This method searches the contact list by email and returns an individual contact.
-     * @return
-     */
-//   public List searchByEmail(){
-//        return searchResultsByEmail;
-//    }
-
-    /**
-     * This method searches the contact list by last name and returns an individual contact.
-     * @return
-     */
-//    public List searchByLastName(){
-//        return searchResultsByLastName;
-//    }
-
-    /**
-     * This method searches the contact list by zip code and returns an individual contact.
-     * @return
-     */
-//    public List searchByZipCode(){
-//        return searchResultsByZipCode;
-//    }
-
-    /**
-     * This method sorts the entire contact list by last name.
-     * @return
-     */
-//    public List sortContactList(){
-//        return sortedContactList;
-//    }
-
-    /**
-     * This method returns the  contact
-     * @return
-     */
+   
     public String toString(){
     	String output = "";
     	for(int i = 0; i<contactList.size();i++){	
