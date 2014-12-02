@@ -83,7 +83,7 @@ public class ContactListApplication {
                 // Retrieve info by last name
                 String lastName = "";
                 while(lastName.length()<1) {
-                    System.out.print("To exit type \"exit\". What is the last name? ");
+                    System.out.print("What is the last name? ");
                     lastName = keyboard.next();
                 }
                 contactList.searchByLastName(lastName);
@@ -91,7 +91,7 @@ public class ContactListApplication {
             case 4:
                 String email = "";
                 while(email.length()<1) {
-                    System.out.print("To exit type \"exit\". What is the email address? ");
+                    System.out.print("What is the email address? ");
                     email = keyboard.next();
                 }
                 contactList.searchByEmail(email);
@@ -99,7 +99,7 @@ public class ContactListApplication {
             case 5:
                 String zipCode = "";
                 while(zipCode.length()<1) {
-                    System.out.print("To exit type \"exit\". What is the zip code? ");
+                    System.out.print("What is the zip code? ");
                     zipCode = keyboard.next();
                 }
                 contactList.searchByZipCode(zipCode);
