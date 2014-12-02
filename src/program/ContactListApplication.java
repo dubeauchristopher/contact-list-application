@@ -25,7 +25,7 @@ public class ContactListApplication {
      */
     public static void main(String args[]) {
         int i = 1;
-        while((i > 0) && (i < 6)){
+        while((i > 0) && (i < 7)){
             menu();
         }
 
@@ -56,11 +56,13 @@ public class ContactListApplication {
     public static void menu() {
 
         System.out.println("-- Actions --");
-        System.out.println("Select an option: \n" + "  1) Enter a new person\n"
+        System.out.println("Select an option: \n"
+                + "  1) Enter a new person\n"
                 + "  2) Print the contact list\n"
                 + "  3) Retreive a persons information by last name \n"
                 + "  4) Retrieve a person's information by email address\n"
                 + "  5) Retrieve all people who live in a given zip code \n"
+                + "  6) Print the sorted contact list\n"
                 + "  0) Exit menu");
 
         int selection = keyboard.nextInt();
@@ -104,6 +106,8 @@ public class ContactListApplication {
                 }
                 contactList.searchByZipCode(zipCode);
                 break;
+            case 6:
+                contactList.sortContactList();
             case 0:
                 exit();
                 break;

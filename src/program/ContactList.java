@@ -1,6 +1,8 @@
 package program;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * @author Christopher Dubeau
@@ -113,6 +115,19 @@ public class ContactList {
      * This method sorts the entire contact list by last name.
      */
     public void sortContactList() {
+
+        Collections.sort(contactList, new Comparator<Contact>(){
+            public int compare(Contact s1, Contact s2) {
+                return s1.getLastName().compareToIgnoreCase(s2.getLastName());
+            }
+
+        });
+        String output = "";
+        for(int i = 0; i < contactList.size(); i++){
+            output += (getContact(i) + "\n" + "\n");
+        }
+
+        System.out.print(output);
 
     }
 
