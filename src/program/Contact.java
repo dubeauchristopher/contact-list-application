@@ -23,7 +23,6 @@ public class Contact implements Serializable {
 
     public Contact() {
 
-
         firstName = "";
         lastName = "";
         emailAddress = "";
@@ -33,18 +32,10 @@ public class Contact implements Serializable {
     }
 
     /**
-     * This method outputs to the console an individual contact
-     * @return
-     */
-    public void printContact(String contact) {
-
-    }
-
-    /**
      * This is the getter for first name
      * @return firstName
      */
-    public String getFirstName() {
+    private String getFirstName() {
         return firstName;
     }
 
@@ -108,7 +99,7 @@ public class Contact implements Serializable {
      * This is the getter for notes
      * @return notes
      */
-    public String getNotes() {
+    private String getNotes() {
         return notes;
     }
 
@@ -147,7 +138,7 @@ public class Contact implements Serializable {
         output += emailAddress + "\n";
         output += phoneNumber + "\n";
         output += zipCode + "\n";
-        output += notes;
+        output += notes + "\n\n";
         return output;
     }
 

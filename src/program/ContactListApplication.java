@@ -30,8 +30,6 @@ public class ContactListApplication {
         while((i > 0) && (i < 8)){
             menu();
         }
-
-
     }
 
     /**
@@ -155,9 +153,6 @@ public class ContactListApplication {
         if(lastName.length()  > 0) {
             contactList.addContact(contact);
         }
-
-
-        menu();
 
     }
 }

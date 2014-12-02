@@ -14,7 +14,7 @@ import java.util.Comparator;
  * Description: This class sorts, prints, and searches the contact list.
  */
 
-public class ContactList implements Serializable {
+public class ContactList {
 
     private ArrayList<Contact> contactList;
 
@@ -34,14 +34,14 @@ public class ContactList implements Serializable {
     public void readContactListFromFile() throws IOException {
 
         try{
-            FileInputStream fis = new FileInputStream("./contactList.txt");
+            FileInputStream fis = new FileInputStream("./contact-file/contactList.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
             contactList = (ArrayList<Contact>) ois.readObject();
             ois.close();
         }catch (IOException e){
-            e.printStackTrace();
+            //e.printStackTrace();
         }catch (ClassNotFoundException e){
-            e.printStackTrace();
+            //e.printStackTrace();
         }
 
 
@@ -53,7 +53,7 @@ public class ContactList implements Serializable {
     public void writeContactListToFile(){
 
         try{
-            FileOutputStream fos = new FileOutputStream("./contactList.txt");
+            FileOutputStream fos = new FileOutputStream("./contact-file/contactList.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(contactList);
             oos.close();
