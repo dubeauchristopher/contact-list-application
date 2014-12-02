@@ -12,7 +12,7 @@ import java.io.BufferedReader;
  * user with several different options regarding the contact list.
  */
 
-public class contactListApplicationMain {
+public class contactListApplication {
 	static Scanner keyboard = new Scanner(System.in);
 	static contactList contactList = new contactList();
 	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
