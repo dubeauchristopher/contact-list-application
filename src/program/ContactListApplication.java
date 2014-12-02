@@ -25,10 +25,12 @@ public class ContactListApplication {
      */
     public static void main(String args[]) throws IOException {
         contactList.readContactListFromFile();
+
         int i = 1;
         while((i > 0) && (i < 8)){
             menu();
         }
+
 
     }
 
@@ -137,11 +139,11 @@ public class ContactListApplication {
         System.out.print("What is the First name: ");
         contact.setFirstName(reader.readLine());
         String lastName = "";
-        while(lastName.length() < 1) {
-            System.out.print("What is the Last name: ");
-            lastName = reader.readLine();
-            contact.setLastName(lastName);
-        }
+
+        System.out.print("What is the Last name: ");
+        lastName = reader.readLine();
+        contact.setLastName(lastName);
+
         System.out.print("What is the Phone Number: ");
         contact.setPhoneNumber(reader.readLine());
         System.out.print("What is your Email Address: ");
@@ -150,7 +152,10 @@ public class ContactListApplication {
         contact.setZipCode(reader.readLine());
         System.out.print("Are there any notes: ");
         contact.setNotes(reader.readLine());
-        contactList.addContact(contact);
+        if(lastName.length()  > 0) {
+            contactList.addContact(contact);
+        }
+
 
         menu();
 

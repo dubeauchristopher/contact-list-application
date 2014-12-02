@@ -32,8 +32,9 @@ public class ContactList implements Serializable {
      * @throws IOException
      */
     public void readContactListFromFile() throws IOException {
+
         try{
-            FileInputStream fis = new FileInputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/contact-file/contactList.txt");
+            FileInputStream fis = new FileInputStream("./contactList.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
             contactList = (ArrayList<Contact>) ois.readObject();
             ois.close();
@@ -42,6 +43,8 @@ public class ContactList implements Serializable {
         }catch (ClassNotFoundException e){
             e.printStackTrace();
         }
+
+
     }
 
     /**
@@ -50,7 +53,7 @@ public class ContactList implements Serializable {
     public void writeContactListToFile(){
 
         try{
-            FileOutputStream fos = new FileOutputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/contact-file/contactList.txt");
+            FileOutputStream fos = new FileOutputStream("./contactList.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(contactList);
             oos.close();
