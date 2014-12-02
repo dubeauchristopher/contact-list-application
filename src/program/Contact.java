@@ -1,27 +1,24 @@
 package program;
 
-import java.util.List;
-
 /**
  * @author Christopher Dubeau
  * @author Ron Rayas
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description:  This class will run the contact  menu and call methods from the contact list class to print sort and search contacts
+ * Description:  This class stores into memory a contact, prints a contact, and returns a string of a contact.
  */
 
 public class Contact {
 
     private String firstName; //FirstName is a data member
     private String lastName; // LastName is a data member
-    //Eventually have to add streetaddress functionality somewhere
     private String emailAddress;  // EmailAddress is a data member
     private String phoneNumber; //PhoneNumber is a data member
     private String notes;  //Notes is a data member
     private String zipCode;
 
-    public Contact(){
+    public Contact() {
         firstName = "";
         lastName = "";
         emailAddress = "";
@@ -31,113 +28,118 @@ public class Contact {
     }
 
     /**
-     * This method prints an individual contact
+     * This method outputs to the console an individual contact
      * @return
      */
-//    public Contact printContact(){
-//        return individualContact;
-//    }
+    public void printContact(String contact) {
+
+    }
 
     /**
-     * @return the firstName
+     * This is the getter for first name
+     * @return firstName
      */
     public String getFirstName() {
         return firstName;
     }
 
     /**
-     * @param firstName the firstName to set
+     * This is the setter for first name
+     * @param firstName
      */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
     /**
-     * @return the lastName
+     * This is the getter for last name
+     * @return lastName
      */
     public String getLastName() {
         return lastName;
     }
 
     /**
-     * @param lastName the lastName to set
+     * This is the setter for last name
+     * @param lastName
      */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
     /**
-     * @return the emailAddress
+     * This is the getter for email address
+     * @return emailAddress
      */
     public String getEmailAddress() {
         return emailAddress;
     }
 
     /**
-     * @param emailAddress the emailAddress to set
+     * This is the setter for the email address
+     * @param emailAddress the emailAddress
      */
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
 
     /**
-     * @return the phoneNumber
+     * This is the getter for phone number
+     * @return phoneNumber
      */
     public String getPhoneNumber() {
         return phoneNumber;
     }
 
     /**
-     * @param phoneNumber the phoneNumber to set
+     * This is the setter for phone number
+     * @param phoneNumber
      */
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
     /**
-     * @return the notes
+     * This is the getter for notes
+     * @return notes
      */
     public String getNotes() {
         return notes;
     }
 
     /**
-     * @param notes the notes to set
+     * This is the setter for notes
+     * @param notes
      */
     public void setNotes(String notes) {
         this.notes = notes;
     }
 
     /**
-     * @return the zipCode
+     * This is the getter for zip code
+     * @return zipCode
      */
     public String getZipCode() {
         return zipCode;
     }
 
     /**
-     * @param zipCode the zipCode to set
+     * This is the setter for zip code
+     * @param zipCode
      */
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
 
     /**
-     * This method prompts the user to
-     * @return
-     */
-    public void addContact(){
-
-    }
-
-    /**
      * This method accepts values and returns a string
-     * @return
+     *
+     * @return output
      */
-    public String toString(){
+    public String toString() {
         String output = "";
         output = firstName + " " + lastName + "\n";
-        output+= emailAddress + "\n";
+        output += emailAddress + "\n";
         output += phoneNumber + "\n";
         output += notes;
         return output;

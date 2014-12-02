@@ -1,31 +1,33 @@
 package program;
 
-import program.Contact;
-import program.ContactList;
-
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.util.Scanner;
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /**
  * @author Christopher Dubeau
  * @author Ron Rayas
  * @author Harpreet Setia
- * @author Long Xu Date: 11/18/14 Description: This class controls the program.
- *         It reads and prints out a contact or contact list.
+ * @author Long Xu Date: 11/18/14
+ * Description: This is the main class for the Contact List program.
  */
 
 public class ContactListApplication {
+
     static Scanner keyboard = new Scanner(System.in);
     static ContactList contactList = new ContactList();
-    static BufferedReader reader = new BufferedReader(new InputStreamReader(
-            System.in));
+    static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+    /**
+     * This is the main method for the application
+     * @param args
+     */
     public static void main(String args[]) {
-
-        ContactList contactList = new ContactList();
-        menu();
+        int i = 1;
+        while((i > 0) && (i < 6)){
+            menu();
+        }
 
     }
 
@@ -79,15 +81,28 @@ public class ContactListApplication {
                 break;
             case 3:
                 // Retrieve info by last name
-                // searchByLast();
+                String lastName = "";
+                while((lastName.length()<1) && (lastName != "exit")) {
+                    System.out.print("To exit type \"exit\". What is the last name? ");
+                    lastName = keyboard.next();
+                }
+                contactList.searchByLastName(lastName);
                 break;
             case 4:
-                // Retrieve info by email
-                // searchByEmail();
+                String email = "";
+                while((email.length()<1) && (email != "exit")) {
+                    System.out.print("To exit type \"exit\". What is the email address? ");
+                    email = keyboard.next();
+                }
+                contactList.searchByEmail(email);
                 break;
             case 5:
-                // Retrieve info by zip code
-                // searchByZip();
+                String zipCode = "";
+                while((zipCode.length()<1) && (zipCode != "exit")) {
+                    System.out.print("To exit type \"exit\". What is the zip code? ");
+                    zipCode = keyboard.next();
+                }
+                contactList.searchByZipCode(zipCode);
                 break;
             case 0:
                 exit();
@@ -98,21 +113,29 @@ public class ContactListApplication {
         }
     }
 
+    /**
+     * This method outputs to the console the contact list
+     */
     public static void printContacts() {
 
         System.out.print(contactList);
     }
 
+    /**
+     * This method prompts the user for values to add a contact to the contact list.
+     * @throws IOException
+     */
     public static void addContact() throws IOException {
         Contact contact = new Contact();
-        System.out.println("What is the First name: ");
+        System.out.print("What is the First name: ");
         contact.setFirstName(reader.readLine());
-        // last name
-        System.out.println("What is the Phone Number: ");
+        System.out.print("What is the Last name: ");
+        contact.setLastName(reader.readLine());
+        System.out.print("What is the Phone Number: ");
         contact.setPhoneNumber(reader.readLine());
-        System.out.println("What is your Email Address: ");
+        System.out.print("What is your Email Address: ");
         contact.setEmailAddress(reader.readLine());
-        System.out.println("What is the Zip Code: ");
+        System.out.print("What is the Zip Code: ");
         contact.setZipCode(reader.readLine());
         contactList.addContact(contact);
 
