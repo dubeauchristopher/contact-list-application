@@ -32,7 +32,7 @@ public class contactList {
     	return contactList.get(index);
     }
    /*
-    *This method will use loop to circle the menu
+    *This method will use loop to circle the contaList and return the outputs.
     */
     
     public String toString(){
