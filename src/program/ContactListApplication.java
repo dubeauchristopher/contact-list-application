@@ -10,7 +10,8 @@ import java.util.Scanner;
  * @author Ron Rayas
  * @author Harpreet Setia
  * @author Long Xu Date: 11/18/14
- * Description: This is the main class for the Contact List program.
+ * Description: This class is the main and it controls the program. It has a menu that prompts the 
+ * user with several different options regarding the contact list.
  */
 
 public class ContactListApplication {

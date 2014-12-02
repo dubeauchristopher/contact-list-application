@@ -11,7 +11,8 @@ import java.util.Comparator;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description: This class sorts, prints, and searches the contact list.
+ * Description:  The class ContactList has an arraylist in which a list of contact/contacts is stored.It also has loop which
+ * adds a new contact to the contact list and then returns the output.
  */
 
 public class ContactList {

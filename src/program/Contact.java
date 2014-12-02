@@ -9,7 +9,8 @@ import java.io.Serializable;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description:  This class stores into memory a contact, prints a contact, and returns a string of a contact.
+ * Description:  This class will stores the contacts first name, last name, email address, street address, phone number, notes
+ * and zipcode then holds it.
  */
 
 public class Contact implements Serializable {
