@@ -47,7 +47,7 @@ public class ContactList {
 
         for(int i=0;i<contactList.size();i++){
 
-            if(contactList.get(i).getEmailAddress() == email){
+            if(contactList.get(i).getEmailAddress().equals(email)){
                 System.out.print(contactList.get(i));
                 j++;
 
@@ -72,14 +72,15 @@ public class ContactList {
 
         for(int i=0;i<contactList.size();i++){
 
-            if(contactList.get(i).getLastName() == lastName){
+            if(contactList.get(i).getLastName().equals(lastName)){
                 System.out.print(contactList.get(i));
                 j++;
             }
         }
 
+        int i = 0;
         if(j == 0){
-            System.out.println("Could not find anyone with that last name.\n" );
+            System.out.println("Could not find anyone with that last name.\n"+contactList.get(i).getLastName() );
         }
 
     }
@@ -97,7 +98,7 @@ public class ContactList {
 
         for(int i=0;i<contactList.size();i++){
 
-            if(contactList.get(i).getZipCode() == zipCode){
+            if(contactList.get(i).getZipCode().equals(zipCode)){
                 System.out.print(contactList.get(i));
                 j++;
             }
