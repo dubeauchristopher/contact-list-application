@@ -33,7 +33,7 @@ public class ContactList implements Serializable {
      */
     public void readContactListFromFile() throws IOException {
         try{
-            FileInputStream fis = new FileInputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/src/program/contactList.txt");
+            FileInputStream fis = new FileInputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/contact-file/contactList.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
             ContactList contactList = (ContactList)ois.readObject();
             ois.close();
@@ -50,7 +50,7 @@ public class ContactList implements Serializable {
     public void writeContactListToFile(){
 
         try{
-            FileOutputStream fos = new FileOutputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/src/program/contactList.txt");
+            FileOutputStream fos = new FileOutputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/contact-file/contactList.txt");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(contactList);
             oos.close();
