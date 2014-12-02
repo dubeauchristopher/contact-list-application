@@ -1,40 +1,36 @@
-package program;
-
+import java.io.InputStreamReader;
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.BufferedReader;
 
 /**
  * @author Christopher Dubeau
  * @author Ron Rayas
  * @author Harpreet Setia
- * @author Long Xu
- * Date: 11/18/14
- * Description: This class controls the program. It reads and prints out a contact or contact list. 
+ * @author Long Xu Date: 11/30/14 
+ * Description: This class is the main and it controls the program. It has a menu that prompts the 
+ * user with several different options regarding the contact list.
  */
 
 public class contactListApplicationMain {
+	static Scanner keyboard = new Scanner(System.in);
+	static contactList contactList = new contactList();
+	static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+	public static void main(String args[]) {
 
-    public static void main(String args[]){
+		contactList contactList = new contactList();
+		menu();
 
-        Contact contact = new Contact();
-        contact.addContact();
-        contact.printContact();;
+	}
 
-        contactList contactList = new contactList();
-        contactList.printAllContacts();;
-        contactList.searchByEmail();
-        contactList.searchByZipCode();
-        contactList.searchByLastName();
-        contactList.sortContactList();
+	/**
+	 * This method will exit the program.
+	 */
+	public static void exit() {
+		System.exit(0);
+	}
 
-
-    }
-    /**
-     * This method will exit the program.
-     */
-    public static void exit(){
-    	System.exit(0);
-    }
     /**
      * This method will return a contact specified by the parameter index.
      * @return
