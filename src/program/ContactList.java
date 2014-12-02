@@ -8,7 +8,8 @@ import java.util.List;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description: This class is designed for  the methods to sort , print, and search the contacts.
+ * Description: One object of this class is listing all the contact informations 
+ * and using loop for recurrence.
  */
 
 public class contactList {
@@ -30,7 +31,10 @@ public class contactList {
     public Contact getContact(int index){
     	return contactList.get(index);
     }
-   
+   /*
+    *This method will use loop to circle the menu
+    */
+    
     public String toString(){
     	String output = "";
     	for(int i = 0; i<contactList.size();i++){	
