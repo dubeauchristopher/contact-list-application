@@ -80,16 +80,12 @@ public class ContactListApplication {
                 }
                 break;
             case 2:
-                // Print the information
                 printContacts();
                 break;
             case 3:
-                // Retrieve info by last name
                 String lastName = "";
-                while(lastName.length() < 1) {
-                    System.out.print("What is the persons last name? ");
-                    lastName = keyboard.next();
-                }
+                System.out.print("What is the persons last name? ");
+                lastName = keyboard.next();
                 contactList.searchByLastName(lastName);
                 break;
             case 4:
@@ -146,6 +142,8 @@ public class ContactListApplication {
         contact.setPhoneNumber(reader.readLine());
         System.out.print("What is your Email Address: ");
         contact.setEmailAddress(reader.readLine());
+        System.out.print("What is your Street Address: ");
+        contact.setStreetAddress(reader.readLine());
         System.out.print("What is the Zip Code: ");
         contact.setZipCode(reader.readLine());
         System.out.print("Are there any notes: ");

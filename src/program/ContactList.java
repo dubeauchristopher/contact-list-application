@@ -44,7 +44,6 @@ public class ContactList {
             //e.printStackTrace();
         }
 
-
     }
 
     /**
@@ -164,7 +163,6 @@ public class ContactList {
             output += (getContact(i) + "\n" + "\n");
         }
 
-        System.out.print(output);
 
     }
 

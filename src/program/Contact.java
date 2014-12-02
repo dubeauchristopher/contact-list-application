@@ -17,6 +17,7 @@ public class Contact implements Serializable {
     private String firstName; //FirstName is a data member
     private String lastName; // LastName is a data member
     private String emailAddress;  // EmailAddress is a data member
+    private String streetAddress;
     private String phoneNumber; //PhoneNumber is a data member
     private String notes;  //Notes is a data member
     private String zipCode;
@@ -29,6 +30,24 @@ public class Contact implements Serializable {
         phoneNumber = "";
         notes = "";
         zipCode = "";
+        streetAddress = "";
+    }
+
+
+    /**
+     * This is the getter for street address
+     * @return
+     */
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    /**
+     * This is the setter for street address
+     * @param streetAddress
+     */
+    public void setStreetAddress(String streetAddress) {
+        streetAddress = streetAddress;
     }
 
     /**
@@ -137,6 +156,7 @@ public class Contact implements Serializable {
         output = firstName + " " + lastName + "\n";
         output += emailAddress + "\n";
         output += phoneNumber + "\n";
+        output += streetAddress + "\n";
         output += zipCode + "\n";
         output += notes + "\n\n";
         return output;
