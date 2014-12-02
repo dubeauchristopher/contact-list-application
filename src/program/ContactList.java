@@ -8,8 +8,8 @@ import java.util.List;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description: One object of this class is listing all the contact informations 
- * and using loop for recurrence.
+ * Description: The class ContactList has an arraylist in which a list of contact/contacts is stored.It also has loop which
+ * adds a new contact to the contact list and then returns the output.
  */
 
 public class contactList {
@@ -32,7 +32,7 @@ public class contactList {
     	return contactList.get(index);
     }
    /*
-    *This method will use loop to circle the contaList and return the outputs.
+    *This method will use loop to circle the menu
     */
     
     public String toString(){
@@ -44,9 +44,3 @@ public class contactList {
     }
 
 }
-/**
-* addperosn
-* printperson
-* contact: print single contact
-* contactlist: printlist of contact
-*/
