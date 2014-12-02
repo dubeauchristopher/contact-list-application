@@ -42,7 +42,7 @@ public class ContactList {
         int j = 0;
         if(contactList.isEmpty()) {
             System.out.println("Your contact list is empty. \n");
-
+            j++;
         }
 
         for(int i=0;i<contactList.size();i++){
@@ -67,6 +67,7 @@ public class ContactList {
         int j = 0;
         if(contactList.isEmpty()) {
             System.out.println("Your contact list is empty. \n");
+            j++;
         }
 
         for(int i=0;i<contactList.size();i++){
@@ -91,6 +92,7 @@ public class ContactList {
         int j = 0;
         if(contactList.isEmpty()) {
             System.out.println("Your contact list is empty. ");
+            j++;
         }
 
         for(int i=0;i<contactList.size();i++){
