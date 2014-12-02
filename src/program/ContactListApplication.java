@@ -86,26 +86,22 @@ public class ContactListApplication {
             case 3:
                 // Retrieve info by last name
                 String lastName = "";
-                while(lastName.length()<1) {
-                    System.out.print("What is the last name? ");
+                while(lastName.length() < 1) {
+                    System.out.print("What is the persons last name? ");
                     lastName = keyboard.next();
                 }
                 contactList.searchByLastName(lastName);
                 break;
             case 4:
                 String email = "";
-                while(email.length()<1) {
-                    System.out.print("What is the email address? ");
+                System.out.print("What is the email address? ");
                     email = keyboard.next();
-                }
-                contactList.searchByEmail(email);
+                    contactList.searchByEmail(email);
                 break;
             case 5:
                 String zipCode = "";
-                while(zipCode.length()<1) {
-                    System.out.print("What is the zip code? ");
-                    zipCode = keyboard.next();
-                }
+                System.out.print("What is the zip code? ");
+                zipCode = keyboard.next();
                 contactList.searchByZipCode(zipCode);
                 break;
             case 6:
@@ -138,8 +134,12 @@ public class ContactListApplication {
         Contact contact = new Contact();
         System.out.print("What is the First name: ");
         contact.setFirstName(reader.readLine());
-        System.out.print("What is the Last name: ");
-        contact.setLastName(reader.readLine());
+        String lastName = "";
+        while(lastName.length() < 1) {
+            System.out.print("What is the Last name: ");
+            lastName = reader.readLine();
+            contact.setLastName(lastName);
+        }
         System.out.print("What is the Phone Number: ");
         contact.setPhoneNumber(reader.readLine());
         System.out.print("What is your Email Address: ");
