@@ -24,7 +24,7 @@ public class ContactListApplication {
      * @param args
      */
     public static void main(String args[]) throws IOException {
-        //contactList.readContactListFromFile();
+        contactList.readContactListFromFile();
         int i = 1;
         while((i > 0) && (i < 8)){
             menu();
@@ -109,6 +109,8 @@ public class ContactListApplication {
                 break;
             case 7:
                 contactList.writeContactListToFile();
+                System.out.println("Contacts saved.");
+                break;
             case 0:
                 exit();
                 break;

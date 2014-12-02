@@ -1,6 +1,8 @@
 package program;
 
 
+import java.io.Serializable;
+
 /**
  * @author Christopher Dubeau
  * @author Ron Rayas
@@ -10,7 +12,7 @@ package program;
  * Description:  This class stores into memory a contact, prints a contact, and returns a string of a contact.
  */
 
-public class Contact {
+public class Contact implements Serializable {
 
     private String firstName; //FirstName is a data member
     private String lastName; // LastName is a data member

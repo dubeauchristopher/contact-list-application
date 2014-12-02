@@ -35,7 +35,7 @@ public class ContactList implements Serializable {
         try{
             FileInputStream fis = new FileInputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/contact-file/contactList.txt");
             ObjectInputStream ois = new ObjectInputStream(fis);
-            ContactList contactList = (ContactList)ois.readObject();
+            contactList = (ArrayList<Contact>) ois.readObject();
             ois.close();
         }catch (IOException e){
             e.printStackTrace();
