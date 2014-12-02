@@ -25,12 +25,9 @@ public class ContactListApplication {
      * @param args
      */
     public static void main(String args[]) throws IOException {
-        contactList.readContactListFromFile();
 
-        int i = 1;
-        while((i > 0) && (i < 8)){
-            menu();
-        }
+        runApplication();
+
     }
 
     /**
@@ -52,10 +49,9 @@ public class ContactListApplication {
     /**
      * This method is a menu from which the user will determine the action they
      * want to take with the program.
-     *
-     * @return
+     * @return  int
      */
-    public static void menu() {
+    public static int menu() {
 
         System.out.println("-- Actions --");
         System.out.println("Select an option: \n"
@@ -64,57 +60,60 @@ public class ContactListApplication {
                 + "  3) Retreive a persons information by last name \n"
                 + "  4) Retrieve a person's information by email address\n"
                 + "  5) Retrieve all people who live in a given zip code \n"
-                + "  6) Print the sorted contact list\n"
+                + "  6) Sort the and print the contact list\n"
                 + "  7) Save all contacts\n"
                 + "  0) Exit menu");
 
         int selection = keyboard.nextInt();
         keyboard.nextLine();
+        return selection;
+    }
 
-        switch (selection) {
-            case 1:
-                // Enter new person
-                try {
-                    addContact();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                break;
-            case 2:
-                printContacts();
-                break;
-            case 3:
-                String lastName = "";
-                System.out.print("What is the persons last name? ");
-                lastName = keyboard.next();
-                contactList.searchByLastName(lastName);
-                break;
-            case 4:
-                String email = "";
-                System.out.print("What is the email address? ");
-                    email = keyboard.next();
-                    contactList.searchByEmail(email);
-                break;
-            case 5:
-                String zipCode = "";
-                System.out.print("What is the zip code? ");
-                zipCode = keyboard.next();
-                contactList.searchByZipCode(zipCode);
-                break;
-            case 6:
-                contactList.sortContactList();
-                break;
-            case 7:
-                contactList.writeContactListToFile();
-                System.out.println("Contacts saved.");
-                break;
-            case 0:
-                exit();
-                break;
-            default:
-                System.out.println("Invalid selection.");
-                break;
+    /**
+     * This method starts the application, loads the contact list from the file and calls the menu method
+     * @throws IOException
+     */
+    public static void runApplication() throws IOException {
+        contactList.readContactListFromFile();
+        int selection = 1;
+        while(selection > 0 && selection < 8) {
+            selection = menu();
+            switch (selection) {
+                case 1:
+                    try {
+                        addContact();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 2:
+                    printContacts();
+                    break;
+                case 3:
+                    contactList.searchByLastName();
+                    break;
+                case 4:
+                    contactList.searchByEmail();
+                    break;
+                case 5:
+                    contactList.searchByZipCode();
+                    break;
+                case 6:
+                    contactList.sortContactList();
+                    System.out.print(contactList.toString());
+                    break;
+                case 7:
+                    contactList.writeContactListToFile();
+                    break;
+                case 0:
+                    exit();
+                    break;
+                default:
+                    System.out.println("Invalid selection.");
+                    break;
+            }
         }
+
     }
 
     /**

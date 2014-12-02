@@ -4,6 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Scanner;
 
 /**
  * @author Christopher Dubeau
@@ -18,7 +19,7 @@ import java.util.Comparator;
 public class ContactList {
 
     private ArrayList<Contact> contactList;
-
+    static Scanner keyboard = new Scanner(System.in);
 
     /**
      * This method defines a constructor that creates a new ArrayList when a new object of class contactList is created
@@ -57,6 +58,7 @@ public class ContactList {
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(contactList);
             oos.close();
+            System.out.println("Contacts saved.");
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -76,7 +78,10 @@ public class ContactList {
     /**
      * This method searches the contact list by email and returns an individual contact.
      */
-    public void searchByEmail(String email) {
+    public void searchByEmail() {
+        String email = "";
+        System.out.print("What is the email address? ");
+        email = keyboard.next();
 
         int j = 0;
         if(contactList.isEmpty()) {
@@ -101,7 +106,11 @@ public class ContactList {
     /**
      * This method searches the contact list by last name and returns an individual contact.
      */
-    public void searchByLastName(String lastName) {
+    public void searchByLastName() {
+
+        String lastName = "";
+        System.out.print("What is the persons last name? ");
+        lastName = keyboard.next();
 
         int j = 0;
         if(contactList.isEmpty()) {
@@ -127,7 +136,10 @@ public class ContactList {
     /**
      * This method searches the contact list by zip code and returns an individual contact.
      */
-    public void searchByZipCode(String zipCode) {
+    public void searchByZipCode() {
+        String zipCode = "";
+        System.out.print("What is the zip code? ");
+        zipCode = keyboard.next();
 
         int j = 0;
         if(contactList.isEmpty()) {
