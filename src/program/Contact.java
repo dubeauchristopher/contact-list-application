@@ -20,7 +20,9 @@ public class Contact {
 	private String emailAddress;  // EmailAddress is a data member
 	private String phoneNumber; //PhoneNumber is a data member
 	private String notes;  //Notes is a data member
-	
+/*
+ * Creating a method called Contact to read and stores all the values.
+ */
     public Contact(){
 // write in test code
     }
