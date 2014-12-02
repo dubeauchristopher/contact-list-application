@@ -39,8 +39,9 @@ public class ContactList {
      */
     public void searchByEmail(String email) {
 
+        int j = 0;
         if(contactList.isEmpty()) {
-            System.out.println("Your contact list is empty. ");
+            System.out.println("Your contact list is empty. \n");
 
         }
 
@@ -48,11 +49,13 @@ public class ContactList {
 
             if(contactList.get(i).getEmailAddress() == email){
                 System.out.print(contactList.get(i));
-
-            }else{
-                System.out.println("Could not find anyone with that email address." );
+                j++;
 
             }
+        }
+
+        if(j == 0){
+            System.out.println("Could not find anyone with that email address.\n" );
         }
     }
 
@@ -61,17 +64,21 @@ public class ContactList {
      */
     public void searchByLastName(String lastName) {
 
+        int j = 0;
         if(contactList.isEmpty()) {
-            System.out.println("Your contact list is empty. ");
+            System.out.println("Your contact list is empty. \n");
         }
 
         for(int i=0;i<contactList.size();i++){
 
-            if(contactList.get(i).getEmailAddress() == lastName){
+            if(contactList.get(i).getLastName() == lastName){
                 System.out.print(contactList.get(i));
-            }else{
-                System.out.println("Could not find anyone with that last name." );
+                j++;
             }
+        }
+
+        if(j == 0){
+            System.out.println("Could not find anyone with that last name.\n" );
         }
 
     }
@@ -80,17 +87,22 @@ public class ContactList {
      * This method searches the contact list by zip code and returns an individual contact.
      */
     public void searchByZipCode(String zipCode) {
+
+        int j = 0;
         if(contactList.isEmpty()) {
             System.out.println("Your contact list is empty. ");
         }
 
         for(int i=0;i<contactList.size();i++){
 
-            if(contactList.get(i).getEmailAddress() == zipCode){
+            if(contactList.get(i).getZipCode() == zipCode){
                 System.out.print(contactList.get(i));
-            }else{
-                System.out.println("Could not find anyone with that last name." );
+                j++;
             }
+        }
+
+        if(j == 0){
+            System.out.println("Could not find anyone with that last name.\n" );
         }
     }
 
