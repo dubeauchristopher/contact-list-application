@@ -144,6 +144,7 @@ public class Contact {
         output = firstName + " " + lastName + "\n";
         output += emailAddress + "\n";
         output += phoneNumber + "\n";
+        output += zipCode + "\n";
         output += notes;
         return output;
     }

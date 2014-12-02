@@ -146,6 +146,8 @@ public class ContactListApplication {
         contact.setEmailAddress(reader.readLine());
         System.out.print("What is the Zip Code: ");
         contact.setZipCode(reader.readLine());
+        System.out.print("Are there any notes: ");
+        contact.setNotes(reader.readLine());
         contactList.addContact(contact);
 
         menu();
