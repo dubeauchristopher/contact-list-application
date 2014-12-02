@@ -8,7 +8,8 @@ import java.util.List;
  * @author Harpreet Setia
  * @author Long Xu
  * Date: 11/18/14
- * Description:  This class will run the contact  menu and call methods from the contact list class to print sort and search contacts
+ * Description:  This class will stores the contacts first name, last name, email address, street address, phone number, notes
+ * and zipcode then holds it.
  */
 
 public class Contact {
@@ -23,14 +24,6 @@ public class Contact {
     public Contact(){
 // write in test code
     }
-
-    /**
-     * This method prints an individual contact
-     * @return
-     */
-//    public Contact printContact(){
-//        return individualContact;
-//    }
 
     /**
      * This method prompts the user to
