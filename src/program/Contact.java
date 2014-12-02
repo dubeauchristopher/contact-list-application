@@ -1,5 +1,6 @@
 package program;
 
+
 /**
  * @author Christopher Dubeau
  * @author Ron Rayas
@@ -19,6 +20,8 @@ public class Contact {
     private String zipCode;
 
     public Contact() {
+
+
         firstName = "";
         lastName = "";
         emailAddress = "";
@@ -144,5 +147,6 @@ public class Contact {
         output += notes;
         return output;
     }
+
 
 }

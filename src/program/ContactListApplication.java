@@ -23,9 +23,10 @@ public class ContactListApplication {
      * This is the main method for the application
      * @param args
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) throws IOException {
+        //contactList.readContactListFromFile();
         int i = 1;
-        while((i > 0) && (i < 7)){
+        while((i > 0) && (i < 8)){
             menu();
         }
 
@@ -63,6 +64,7 @@ public class ContactListApplication {
                 + "  4) Retrieve a person's information by email address\n"
                 + "  5) Retrieve all people who live in a given zip code \n"
                 + "  6) Print the sorted contact list\n"
+                + "  7) Save all contacts\n"
                 + "  0) Exit menu");
 
         int selection = keyboard.nextInt();
@@ -108,6 +110,9 @@ public class ContactListApplication {
                 break;
             case 6:
                 contactList.sortContactList();
+                break;
+            case 7:
+                contactList.writeContactListToFile();
             case 0:
                 exit();
                 break;

@@ -1,5 +1,6 @@
 package program;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -13,7 +14,7 @@ import java.util.Comparator;
  * Description: This class sorts, prints, and searches the contact list.
  */
 
-public class ContactList {
+public class ContactList implements Serializable {
 
     private ArrayList<Contact> contactList;
 
@@ -23,8 +24,41 @@ public class ContactList {
      */
     public ContactList() {
         contactList = new ArrayList<Contact>();
+
     }
 
+    /**
+     * Method that reads the contact list from a file
+     * @throws IOException
+     */
+    public void readContactListFromFile() throws IOException {
+        try{
+            FileInputStream fis = new FileInputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/src/program/contactList.txt");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            ContactList contactList = (ContactList)ois.readObject();
+            ois.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }catch (ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Method that writes the contact list to a file
+     */
+    public void writeContactListToFile(){
+
+        try{
+            FileOutputStream fos = new FileOutputStream("/Users/christopherdubeau/Development/java-class/contact-list-application/src/program/contactList.txt");
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(contactList);
+            oos.close();
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+
+    }
 
     /**
      * This method returns a contact from the list of contacts
@@ -151,5 +185,6 @@ public class ContactList {
         contactList.add(contact);
 
     }
+
 
 }
