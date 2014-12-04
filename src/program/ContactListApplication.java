@@ -154,3 +154,216 @@ public class ContactListApplication {
 
     }
 }
+
+
+/*
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+
+1
+What is the First name: Christopher
+What is the Last name: Dubeau
+What is the Phone Number: 000-000-0000
+What is your Email Address: chris@email.com
+What is your Street Address: 1 Main Street
+What is the Zip Code: 94022
+Are there any notes: no notes for chris
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+1
+What is the First name: Ron
+What is the Last name: Rayas
+What is the Phone Number: 000-000-0000
+What is your Email Address: ronemail.com
+What is your Street Address: 2 main st
+What is the Zip Code: 94022
+Are there any notes: Yes
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+1
+What is the First name: Long
+What is the Last name: Xu
+What is the Phone Number: 415-521-8122
+What is your Email Address: xulonggg@gmail.com
+What is your Street Address: 152 thrid street
+What is the Zip Code: 94041
+Are there any notes: Yes
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+1
+What is the First name: Harpreet
+What is the Last name: Setia
+What is the Phone Number: 444-555-4545
+What is your Email Address: harpreet@gmail.com
+What is your Street Address: 444 main street
+What is the Zip Code: 94087
+Are there any notes: So many notes
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+  7
+Contacts saved.
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+
+6
+Christopher Dubeau
+chris@email.com
+000-000-0000
+1 Main Street
+94022
+no notes for chris
+
+
+
+Ron Rayas
+ronemail.com
+000-000-0000
+2 main st
+94022
+Yes
+
+
+
+Harpreet Setia
+harpreet@gmail.com
+444-555-4545
+444 main street
+94087
+So many notes
+
+
+
+Long Xu
+xulonggg@gmail.com
+415-521-8122
+152 thrid street
+94041
+Yes
+
+
+
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+3
+What is the persons last name? Rayas
+Ron Rayas
+ronemail.com
+000-000-0000
+2 main st
+94022
+Yes
+
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+
+4
+What is the email address? harpreet@gmail.com
+Harpreet Setia
+harpreet@gmail.com
+444-555-4545
+444 main street
+94087
+So many notes
+
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+5
+What is the zip code? 94022
+Christopher Dubeau
+chris@email.com
+000-000-0000
+1 Main Street
+94022
+no notes for chris
+
+Ron Rayas
+ronemail.com
+000-000-0000
+2 main st
+94022
+Yes
+
+-- Actions --
+Select an option:
+  1) Enter a new person
+  2) Print the contact list
+  3) Retreive a persons information by last name
+  4) Retrieve a person's information by email address
+  5) Retrieve all people who live in a given zip code
+  6) Sort the and print the contact list
+  7) Save all contacts
+  0) Exit menu
+
+ */
