@@ -16,8 +16,8 @@ import java.io.Serializable;
 public class Contact implements Serializable {
 
     private String firstName; //FirstName is a data member
-    private String lastName; // LastName is a data member
-    private String emailAddress;  // EmailAddress is a data member
+    private String lastName; //LastName is a data member
+    private String emailAddress;  //EmailAddress is a data member
     private String streetAddress; //Street Address is a data member
     private String phoneNumber; //PhoneNumber is a data member
     private String notes;  //Notes is a data member
@@ -55,7 +55,7 @@ public class Contact implements Serializable {
      * This is the getter for first name
      * @return firstName
      */
-    private String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
@@ -119,7 +119,7 @@ public class Contact implements Serializable {
      * This is the getter for notes
      * @return notes
      */
-    private String getNotes() {
+    public String getNotes() {
         return notes;
     }
 
