@@ -18,10 +18,10 @@ public class Contact implements Serializable {
     private String firstName; //FirstName is a data member
     private String lastName; // LastName is a data member
     private String emailAddress;  // EmailAddress is a data member
-    private String streetAddress;
+    private String streetAddress; //Street Address is a data member
     private String phoneNumber; //PhoneNumber is a data member
     private String notes;  //Notes is a data member
-    private String zipCode;
+    private String zipCode; //Zip code is a data member
 
     public Contact() {
 
