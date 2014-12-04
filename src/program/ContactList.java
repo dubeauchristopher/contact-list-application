@@ -99,7 +99,7 @@ public class ContactList {
         }
 
         if(j == 0){
-            System.out.println("Could not find anyone with that email address.\n" );
+            System.out.println("Could not find anyone with the email address "+email+".\n" );
         }
     }
 
@@ -128,7 +128,7 @@ public class ContactList {
 
         int i = 0;
         if(j == 0){
-            System.out.println("Could not find anyone with that last name.\n"+contactList.get(i).getLastName() );
+            System.out.println("Could not find anyone with the last name "+lastName+".\n" );
         }
 
     }
@@ -156,7 +156,7 @@ public class ContactList {
         }
 
         if(j == 0){
-            System.out.println("Could not find anyone with that last name.\n" );
+            System.out.println("Could not find anyone with the zip code "+zipCode+".\n" );
         }
     }
 
