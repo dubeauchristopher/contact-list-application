@@ -171,6 +171,7 @@ public class ContactList {
             }
 
         });
+
         String output = "";
         for(int i = 0; i < contactList.size(); i++){
             output += (getContact(i) + "\n" + "\n");

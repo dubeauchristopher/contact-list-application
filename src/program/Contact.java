@@ -48,7 +48,7 @@ public class Contact implements Serializable {
      * @param streetAddress
      */
     public void setStreetAddress(String streetAddress) {
-        streetAddress = streetAddress;
+        this.streetAddress = streetAddress;
     }
 
     /**
@@ -154,12 +154,12 @@ public class Contact implements Serializable {
      */
     public String toString() {
         String output = "";
-        output = firstName + " " + lastName + "\n";
-        output += emailAddress + "\n";
-        output += phoneNumber + "\n";
-        output += streetAddress + "\n";
-        output += zipCode + "\n";
-        output += notes + "\n\n";
+        output = getFirstName() + " " + getLastName() + "\n";
+        output += getEmailAddress() + "\n";
+        output += getPhoneNumber() + "\n";
+        output += getStreetAddress() + "\n";
+        output += getZipCode() + "\n";
+        output += getNotes() + "\n\n";
         return output;
     }
 
