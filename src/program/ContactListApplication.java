@@ -16,9 +16,9 @@ import java.util.Scanner;
 
 public class ContactListApplication {
 
-    static Scanner keyboard = new Scanner(System.in);
-    static ContactList contactList = new ContactList();
-    static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    private static Scanner keyboard = new Scanner(System.in);
+    private static ContactList contactList = new ContactList();
+    private static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     /**
      * This is the main method for the application

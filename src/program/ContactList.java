@@ -19,7 +19,7 @@ import java.util.Scanner;
 public class ContactList {
 
     private ArrayList<Contact> contactList;
-    static Scanner keyboard = new Scanner(System.in);
+    private static Scanner keyboard = new Scanner(System.in);
 
     /**
      * This method defines a constructor that creates a new ArrayList when a new object of class contactList is created
