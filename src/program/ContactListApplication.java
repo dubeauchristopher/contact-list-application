@@ -37,14 +37,6 @@ public class ContactListApplication {
         System.exit(0);
     }
 
-    /**
-     * This method will return a contact specified by the parameter index.
-     *
-     * @return
-     */
-    public static Contact getContact(int index) {
-        return contactList.getContact(index);
-    }
 
     /**
      * This method is a menu from which the user will determine the action they
